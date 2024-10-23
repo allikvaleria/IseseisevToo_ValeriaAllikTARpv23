@@ -15,27 +15,9 @@ namespace IseseisevToo_ValeriaAllikTARpv23
     {
         public static void Main(string[] args)
         {
-            Console.OutputEncoding = Encoding.UTF8;
-            Console.WriteLine("Sisestage rida : ");
-            string sisestatudRida = Console.ReadLine();
-            string text = "a";
-            char[] texts = text.ToCharArray();
-            int count = 0;
-            double protsent = Math.Round((double)count / sisestatudRida.Length * 100);
-            for (int i = 0; i < sisestatudRida.Length; i++)
-            {
-                if (sisestatudRida[i]=="a")
-                {
-                    count++;
-                    Console.WriteLine("Sümbol : " + text);
-                    Console.WriteLine("Protsent : " + protsent + "%");
-                }
-                else
-                {
-                    Console.WriteLine("Sümbolit a ei ole");
-                    break;
-                }
-            }
+            Ulesanne1.Ulesanne_1();
+            Ulesanne2.Ulesanne_2();
+            Ulesanne3.Ulesanne_3();
         }
     }
 }
