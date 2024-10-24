@@ -10,28 +10,32 @@ namespace IseseisevToo_ValeriaAllikTARpv23
     {
         public static void Ulesanne_1()
         {
-            Console.WriteLine("Sisestage rida: ");
+            Console.Write("Sisestage rida: ");
             string sisestatudRida = Console.ReadLine();
-            char searchChar = 'a'; // Using a char
-            int count = 0;
-
+            Console.Write("Sisestage sümbol, mida otsida: ");
+            // Ищет символ в строке, который ввел пользователь
+            char searchChar = Console.ReadLine()[0]; 
+            int count = 0; // Сохроняет количество символов
+            //Проходит по каждому символу строки
             for (int i = 0; i < sisestatudRida.Length; i++)
             {
+                //Увеличивает count если символ в строке совпадает с поиском
                 if (sisestatudRida[i] == searchChar)
                 {
                     count++;
                 }
             }
-
+            // Вывод результата
             if (count > 0)
             {
+                // Считает процент
                 double protsent = Math.Round((double)count / sisestatudRida.Length * 100);
                 Console.WriteLine($"Sümbol: {searchChar}");
                 Console.WriteLine($"Protsent: {protsent}%");
             }
             else
             {
-                Console.WriteLine("Sümbolit 'a' ei ole.");
+                Console.WriteLine($"Sümbolit {searchChar} ei ole.");
             }
         }
     }
